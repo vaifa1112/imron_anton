@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alur Metric KOL</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .slide-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            max-width: 800px;
+            width: 90%;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.3em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            padding: 12px 24px;
+            font-size: 1em;
+            color: white;
+            background-color: #3498db;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .theme-info {
+            font-size: 0.9em;
+            color: #888;
+            margin-top: 20px;
+        }
+        .theme-info a {
+            color: #3498db;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .theme-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container">
+        <h1>Alur Metric KOL</h1>
+        <p>dari tabel database sampai visual</p>
+        
+        <div class="controls">
+            <button>&#8592; Sebelumnya</button>
+            <button>Berikutnya &#8594;</button>
+        </div>
+        
+        <div class="theme-info">
+            Tema: otomatis | <a onclick="toggleFullscreen()">Layar penuh</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    alert(`Gagal masuk mode layar penuh: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+</body>
+</html>
